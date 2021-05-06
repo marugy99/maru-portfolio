@@ -304,6 +304,15 @@ h2::before {
   }
 }
 
+/* Credit */
+
+footer {
+  display: grid;
+  place-items: center;
+  height: 5rem;
+  font-size: 1rem;
+}
+
 /* Media queries */
 
 @media (max-width: 700px) {
@@ -318,10 +327,6 @@ h2::before {
   h2 {
     font-size: 2rem;
   }
-
-  h2::before {
-  content: "";
-}
 
   h3 {
     font-size: 1.5rem;
@@ -398,11 +403,8 @@ h2::before {
   }
 }
 
-/* Credit */
-
-footer {
-  display: grid;
-  place-items: center;
-  height: 5rem;
-  font-size: 1rem;
+@media (min-width: 700px) {
+  h2::before {
+    font-size: 4.2rem;
+  }
 }
