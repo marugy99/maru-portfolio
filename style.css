@@ -320,9 +320,7 @@ h2::before {
   }
 
   h2::before {
-  content: "●";
-  font-size: 40px;
-  color: var(--blue);
+  content: "";
 }
 
   h3 {
