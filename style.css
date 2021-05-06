@@ -201,7 +201,7 @@ i:not(:last-child) {
 
 h2::before {
   content: "●";
-  font-size: 4.2rem;
+  font-size: 2rem;
   color: var(--blue);
 }
 
