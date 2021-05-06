@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap");
+
+:root {
+  --blue: #1cb4da;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", monospace;
+  color: rgb(48, 48, 48);
+  line-height: 1.5;
+  font-size: 1.2rem;
+  background: rgb(30, 201, 197);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 201, 197, 1) 0%,
+    rgba(250, 255, 138, 1) 100%
+  );
+  cursor: url(images/cursor.svg), auto;
+}
+
+*::selection {
+  background-color: rgba(30, 201, 197, 0.5);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+p {
+  margin: 0.8rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+  border: var(--blue);
+  border-radius: 10px;
+  margin: 0.8rem;
+  cursor: url(images/click.svg), auto;
+}
+
+a:hover {
+  padding: 0;
+  color: var(--blue);
+  background-color: initial;
+}
+
+/* Navigation bar */
+
+nav {
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid white;
+}
+
+ul {
+  padding: 1rem;
+  margin: 0;
+}
+
+nav ul {
+  padding-left: 0px;
+}
+
+nav li {
+  display: inline;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+
+nav li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+nav a:hover {
+  background-color: var(--blue);
+  color: white;
+  padding: 8px;
+}
+
+/* Hero section */
+
+header,
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  min-height: 80vh;
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 1rem;
+  animation: pop 500ms ease-in;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--blue);
+  left: 20px;
+  top: 15px;
+}
+
+.fade {
+  /* Fade animation on page load */
+  animation: fade 500ms ease-in;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  /* Animation for the image on page load */
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* General styles */
+
+.border {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 75%;
+  margin: 1.5rem auto;
+  border-radius: 20px;
+  position: relative;
+}
+
+.section {
+  margin-top: 8rem;
+}
+
+.icons {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.icons p {
+  font-family: "Roboto", monospace;
+  font-size: 1rem;
+  font-weight: initial;
+}
+
+.different {
+  /* Styles for the 'me' letters */
+  color: rgb(48, 48, 48);
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: rgb(48, 48, 48);
+}
+
+i:not(:last-child) {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.content {
+  margin: 2rem;
+  text-align: justify;
+}
+
+h2::before {
+  content: "●";
+  font-size: 4.2rem;
+  color: var(--blue);
+}
+
+/* Hand animation for the about me section */
+
+.wave {
+  animation: wave 1s infinite;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Projects section */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projects img {
+  width: 18rem;
+  height: auto;
+  transition: all 300ms ease-in-out;
+}
+
+.projects img:hover {
+  transform: scale(1.05);
+}
+
+.projects p {
+  /* Font styles for the projects description */
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+  max-width: 18rem;
+}
+
+.projects a {
+  /* Styles for the launch and repository buttons */
+  font-size: 1rem;
+}
+
+.projects a:hover {
+  /* Hover styles for the launch and repository buttons */
+  border: 3px solid var(--blue);
+  padding: 8px;
+  color: inherit;
+}
+
+.projects .icons {
+  /* Separation for the launch and repository buttons from the projects description*/
+  margin-top: 1rem;
+}
+
+/* Contact section */
+
+.contact-links {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#contact .content {
+  /* The content inside the contact section is centered */
+  text-align: center;
+}
+
+#contact h2 {
+  margin-left: -10px;
+}
+
+.down {
+  /* Hand animation */
+  animation: down 1s infinite;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h2::before {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  nav li {
+    font-size: 0.9rem;
+  }
+
+  header img {
+    width: 100px;
+    height: auto;
+  }
+
+  nav li:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+
+  nav {
+    text-align: right;
+  }
+
+  nav a {
+    margin: 0px;
+  }
+
+  .border {
+    width: 90%;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    top: 18px;
+  }
+
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icons a {
+    font-size: 0.9rem;
+  }
+
+  #about-me i {
+    margin-right: 0px;
+    margin-top: 0.8rem;
+  }
+
+  .projects img {
+    max-width: 14rem;
+    transform: translateX(10%);
+  }
+}
+
+@media (max-width: 320px) {
+  .circle {
+    display: none;
+  }
+
+  .projects img {
+    max-width: 12rem;
+    transform: none;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  #contact p {
+    margin: initial;
+  }
+}
+
+/* Credit */
+
+footer {
+  display: grid;
+  place-items: center;
+  height: 5rem;
+  font-size: 1rem;
+}
