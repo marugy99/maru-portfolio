@@ -321,7 +321,7 @@ h2::before {
 
   h2::before {
   content: "●";
-  font-size: 2rem;
+  font-size: 10vw;
   color: var(--blue);
 }
 
