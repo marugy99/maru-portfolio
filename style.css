@@ -380,7 +380,8 @@ footer {
 
   .projects img {
     max-width: 14rem;
-    transform: translateX(10%);
+    display: block;
+    margin: auto;
   }
 }
 
