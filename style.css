@@ -277,7 +277,6 @@ h2::before {
 }
 
 #contact .content {
-  /* The content inside the contact section is centered */
   text-align: center;
 }
 
@@ -311,6 +310,46 @@ footer {
   place-items: center;
   height: 5rem;
   font-size: 1rem;
+}
+
+/* Contact form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+.text-area {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  width: 50%;
+}
+
+.text-area {
+  resize: none;
+  height: 8rem;
+  margin: auto;
+}
+
+.submit-btn {
+  cursor: pointer;
+  margin: auto;
+  cursor: url(images/click.svg), auto;
+  background-color: var(--blue);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  transition: opacity 300ms ease-in-out;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
 }
 
 /* Media queries */
@@ -382,6 +421,22 @@ footer {
     max-width: 14rem;
     display: block;
     margin: auto;
+  }
+
+  input,
+  .text-area {
+    width: 80%;
+  }
+
+  .projects a:hover {
+    padding: 0;
+    color: #229bb9;
+    background-color: initial;
+    border: none;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
   }
 }
 
