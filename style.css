@@ -408,6 +408,12 @@ input,
     margin: 0px;
   }
 
+  .project-tile {
+    justify-content: center;
+    align-items: center;
+    text-align: initial;
+  }
+
   .border {
     width: 90%;
   }
