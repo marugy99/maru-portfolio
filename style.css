@@ -25,7 +25,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
@@ -42,6 +43,12 @@ h2 {
 h3 {
   font-size: 2rem;
   text-align: center;
+}
+
+h4 {
+  padding-left: 1rem;
+  margin-left: 0.8rem;
+  margin-top: 0.8rem;
 }
 
 p {
@@ -125,8 +132,8 @@ header img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  position: absolute;
   background-color: var(--blue);
+  position: absolute;
   left: 20px;
   top: 15px;
 }
@@ -200,8 +207,8 @@ i:not(:last-child) {
 }
 
 h2::before {
-  content: "●";
-  font-size: 1.5rem;
+  content: "\2771";
+  font-size: 2rem;
   color: var(--blue);
 }
 
@@ -227,46 +234,55 @@ h2::before {
 
 /* Projects section */
 
-.projects {
+.project-tile {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.project-tile {
+  margin-top: 5rem;
+}
+
+.first-proj {
   margin-top: 2rem;
 }
 
-.projects img {
-  width: 18rem;
+.project-tile img {
+  width: 20rem;
   height: auto;
   transition: all 300ms ease-in-out;
 }
 
-.projects img:hover {
+.project-tile img:hover {
   transform: scale(1.05);
 }
 
-.projects p {
+.project-tile p {
   /* Font styles for the projects description */
   font-size: 1rem;
-  margin: 0.5rem 0 0 0;
-  max-width: 18rem;
+  max-width: 20rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.projects a {
+.project-tile a {
   /* Styles for the launch and repository buttons */
   font-size: 1rem;
 }
 
-.projects a:hover {
+.project-tile a:hover {
   /* Hover styles for the launch and repository buttons */
   border: 3px solid var(--blue);
   padding: 8px;
   color: inherit;
 }
 
-.projects .icons {
+.project-tile .icons {
   /* Separation for the launch and repository buttons from the projects description*/
   margin-top: 1rem;
+  text-align: initial;
 }
 
 /* Contact section */
@@ -408,6 +424,10 @@ input,
     justify-content: center;
   }
 
+  .skill {
+    flex: 1;
+  }
+
   .icons a {
     font-size: 0.9rem;
   }
@@ -417,8 +437,9 @@ input,
     margin-top: 0.8rem;
   }
 
-  .projects img {
-    max-width: 14rem;
+  .project-tile img {
+    width: 14rem;
+    height: auto;
     display: block;
     margin: auto;
   }
@@ -428,7 +449,7 @@ input,
     width: 80%;
   }
 
-  .projects a:hover {
+  .project-tile a:hover {
     padding: 0;
     color: #229bb9;
     background-color: initial;
@@ -441,11 +462,22 @@ input,
 }
 
 @media (max-width: 320px) {
+  h4 {
+    padding-left: initial;
+    margin-left: initial;
+  }
+
+  .project-tile p {
+    /* Font styles for the projects description */
+    padding-left: initial;
+    padding-right: initial;
+  }
+
   .circle {
     display: none;
   }
 
-  .projects img {
+  .project-tile img {
     max-width: 12rem;
     transform: none;
   }
@@ -461,6 +493,6 @@ input,
 
 @media (min-width: 700px) {
   h2::before {
-    font-size: 4.2rem;
+    font-size: 3rem;
   }
 }
